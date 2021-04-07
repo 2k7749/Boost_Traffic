@@ -2662,6 +2662,26 @@ fieldset[disabled] .form-control {
     top: 0;
     position: sticky;
 }
+
+
+
+.outer-big {
+    overflow-y: auto;
+    height: 500px;
+}
+
+.outer-big {
+    width: 100%;
+    -layout: fixed;
+}
+
+.outer-big th {
+    text-align: left;
+    top: 0;
+    position: sticky;
+}
+
+
 /* Let's get this party started */
 ::-webkit-scrollbar {
     width: 12px;
