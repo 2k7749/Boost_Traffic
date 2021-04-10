@@ -61,5 +61,5 @@ function proxy_db(){
 }
 
 
-echo '<html>' . str_replace(',', '<br>',implode(',', proxy_db())) . '</html>';
-//echo '<html>' . str_replace(' ', '<br>', implode(' ', fetch_proxies())) . '</html>';
+//echo '<html>' . str_replace(',', '<br>',implode(',', proxy_db())) . '</html>';
+print str_replace(' ', '<br>', implode(' ', fetch_proxies()));

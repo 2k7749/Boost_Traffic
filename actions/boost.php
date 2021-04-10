@@ -53,7 +53,7 @@ if($typeBoost == 'singlethread')
       
         }
     curl_close($ch);
-	var_dump($result);
+	//var_dump($result);
 }
 elseif($typeBoost == 'multithread')
 {

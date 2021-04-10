@@ -571,6 +571,24 @@ include 'config.php';
         document.execCommand("copy");
         toastr.success('BOOOM!!', 'Copied the Live Proxy, Thanks', {timeOut: 3000});
     }
+    $("#getsampleproxies").click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'actions/grabproxy.php',
+            type: 'POST',
+            data: {
+                
+            },
+            success: function (data) {
+               /// var htmlData =  $.parseHTML(data);
+                //alert(data);
+                //$(htmlData).appendTo('#proxylist');
+                var htmlData = data.replace(/<br\s*\/?>/mg,"\n");
+                $("#proxylist").html(htmlData);
+            },
+            });
+    });
+    
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
